@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block title %} Gallery {% endblock %}
+
+
+{% block body_block %}
+
+{% for image in images %}
+<img src='/static/gallery/{{image}}' alt="{{image}}" width="70%" height="70%" class="img-rounded" style="display:block; border-radius:35px; margin:0 auto; padding:10px; align:center;" />
+
+{% endfor %}
+
+<h4>Images are randomly selceted from the internet for demonstration purpose only.</h4>
+
+{% endblock %}

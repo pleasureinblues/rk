@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body_block %}
+{% block title %}Contact Us{% endblock %}
+        <h1>Contact Form</h1>
+        <form id="contact_form" method="post" action="{% url 'rango:contact' %}"/>
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text }}
+                <p>{{ field }}</p>
+            {% endfor %}
+
+            <input type="submit" name="submit" value="Submit the Message"/>
+        </form>
+
+{% endblock %}

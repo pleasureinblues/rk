@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}contact Messages{% endblock %}
+
+{% block body_block %}
+    <h1>Rango says..hello world!</h1>
+        {% if messages %}
+            <table>
+                {% for msg in messages %}
+                <tr>
+                    <td>{{ msg.name }}</td>
+                    <td>{{ msg.email }}</td>
+                    <td>{{ msg.subject }}</td>
+                    <td>{{ msg.message }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+       {% else %}
+            <strong>There are no messages present.</strong>
+       {% endif %}
+        <li><a href="/rango/add_category/">Add a New Category</a></li>
+
+{% endblock %}
