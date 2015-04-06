@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Home{% endblock %}
+
+{% block body_block %}
+        <div class="page-header">
+<h1>Muhammad Ahmed's Project</h1>
+            <h4>Based on Tango With Django 1.7</h4>
+        </div>
+
+    <div class="row placeholders">
+        <div class="col-xs-12 col-sm-6 placeholder">
+<h3>Introduction</h3>
+<div style="padding:5px 5px 25px 25px;" class="align-justify">
+
+<p><br>This project is based on the instructions taught in the  online Django Book &lsquo;<a href="http://www.tangowithdjango.com/">Tango with Django</a>&rsquo; authored by &lsquo;<a href="http://www.dcs.gla.ac.uk/~leif/">Leif Azzopardi</a>&rsquo; and &lsquo;<a href="https://twitter.com/maxwelld90">David  Maxwell</a>&rsquo;.</p>
+<p>The project aims to form an online link directory  named 'Rango' categorized under different groupings. The project uses Python 2.7 and Django  1.7 along with some other packages. </p>
+
+    <p>This project is actually  a replica of the app <a href="{% url 'rango:index' %}">&lsquo;Rango&rsquo;</a> taught in the above referred book. The book not  only makes the concepts easy to understand but also covers minor details which  some time causes novice learners to get stuck for days.</p>
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-6 placeholder">
+<h3> Acknowledgement</h3>
+
+<div style="padding:5px 5px 25px 25px;" class="align-justify">
+  <p><br>
+    <p>For several months I had been craving to get into  the Django Web Framework and due to the unavailability of proper working  tutorials I was having very hard time to actualize the concepts understood from  the official documentation and other assorted tutorials. </p>
+<p>Another problem to my learning efforts was that the  tutorials available on the internet were mostly version associated and it was  very difficult to be on track while using these tutorials. These tutorials were  addressing different versions and were quite confusing due to the writers&rsquo;  approach and their version specific focus. </p>
+<p>Meanwhile the online book &ldquo;Tango with Django&rdquo; was  updated to Django version 1.7 fortunately and this was the turning point for my  learning curve. I read each and every character of the updated book and it took  me to the fantastic journey of developing my first ever Django Site. </p>
+<p>In a nutshell the books helped me a lot to understand  the basic course of development process using Django. </p>
+<p>I am highly grateful for both authors of this  great book. </p>
+</div>
+        </div>
+
+    </div>
+
+{% endblock %}
+

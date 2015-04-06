@@ -10,9 +10,10 @@
     <meta name="author" content="">
     <link rel="icon" href="{% static 'favicon/favicon.ico' %}">
 
-    <title>Serenity - {% block title %}How to Tango with Django!{% endblock %}</title>
+    <title>Rango - {% block title %}How to Tango with Django!{% endblock %}</title>
 
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -37,11 +38,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/rango/">Serenity</a>
+            <a class="navbar-brand" href="/rango/">Rango</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'rango:index' %}">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'rango:index' %}">Rango</a></li>
                 {% if user.is_authenticated %}
                     <li><span class="navbar-text">Welcome, {{ user.username | capfirst }}!</span></li>
                     <li><a href="{% url 'rango:restricted' %}">Restricted Page</a></li>

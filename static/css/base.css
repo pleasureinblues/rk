@@ -5,3 +5,15 @@ H1 {
 .about {
     color: #ccc;;
 }
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-justify {
+    text-align: justify;
+}

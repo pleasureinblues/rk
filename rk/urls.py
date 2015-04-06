@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from registration.backends.simple.views import RegistrationView
+from rango import views
 
 #creat a new class that redirects the user to the index page, if successful at logging
 class MyRegistrationView(RegistrationView):
@@ -10,9 +11,10 @@ class MyRegistrationView(RegistrationView):
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'twd.views.home', name='home'),
+    # url(r'^$', 'views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^$', views.home, name='home'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rango/', include('rango.urls', namespace='rango')),
     url(r'^gmail/', include('gmail.urls')),

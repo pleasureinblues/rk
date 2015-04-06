@@ -280,3 +280,9 @@ def gallery(request):
 
     img_list =os.listdir(images_path)
     return render(request, 'rango\gallery.html', {'images': img_list})
+
+
+def home(request):
+    context_dict = {}
+    context_dict['abc'] = 'We are here'
+    return render(request, 'rango/home.html', context_dict)
